@@ -44,8 +44,11 @@ synthetic_data = pd.DataFrame(data_records, columns=columns)
 
 
 
-synthetic_data.to_csv('synthetic_thunderstorm_data.csv', index=False)
-print(synthetic_data)
+#synthetic_data.to_csv('synthetic_thunderstorm_data.csv', index=False)
+# Saving DataFrame to a CSV file with '|' as the delimiter
+synthetic_data.to_csv('synthetic_thunderstorm_data.csv', sep='|', index=False)
+
+print(synthetic_data.head())
 # Ensure the directory exists
 directory = r'C:\Users\vamsi\Documents\python problems'
 if not os.path.exists(directory):
